@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li data-filter="all" class="active">🏠 Todas</li>
+      <li data-filter="work">💼 Trabalho</li>
+      <li data-filter="home">🏡 Casa</li>
+    </ul>
+  </aside>
+
+  <main class="container">
+    <h1>Minhas Tarefas</h1>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
+
+      <select id="category">
+        <option value="work">Trabalho</option>
+        <option value="home">Casa</option>
+      </select>
+
+      <button id="addTaskBtn">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
