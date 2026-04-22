@@ -38,14 +38,6 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 
 ---
 
-## 📸 Preview
+Desenvolvido por Pedro
 
-*(adicione aqui um print ou GIF do projeto)*
-
----
-
-## 📦 Como executar o projeto
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seuusuario/todo-list-js.git
+Em busca de oportunidades internacionais na área de tecnologia.
