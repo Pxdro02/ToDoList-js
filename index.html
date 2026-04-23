@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <div class="form">
+      <input type="text" id="taskInput" placeholder="Digite a tarefa">
+
+      <select id="category">
+        <option value="estudo">Estudo</option>
+        <option value="trabalho">Trabalho</option>
+        <option value="pessoal">Pessoal</option>
+      </select>
+
+      <select id="priority">
+        <option value="low">Baixa</option>
+        <option value="medium">Média</option>
+        <option value="high">Alta</option>
+      </select>
+
+      <input type="date" id="deadline">
+
+      <button id="addTaskBtn">Adicionar</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="sidebar">
+      <ul>
+        <li class="active" data-filter="all">Todas</li>
+        <li data-filter="estudo">Estudo</li>
+        <li data-filter="trabalho">Trabalho</li>
+        <li data-filter="pessoal">Pessoal</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

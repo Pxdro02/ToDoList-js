@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  outline: 1px solid #3b82f6;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* Lista */
+#taskList {
+  list-style: none;
+}
+
+/* Task */
+#taskList li {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: fadeIn 0.3s ease;
+  position: relative;
+}
+
+#taskList li:hover {
+  background: #273449;
+}
+
+/* Linha principal */
+#taskList li span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Status concluído */
+.completed span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Informações */
+#taskList li small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Prioridade (cores) */
+.priority-low {
+  color: #22c55e;
+}
+
+.priority-medium {
+  color: #facc15;
+}
+
+.priority-high {
+  color: #ef4444;
+}
+
+/* Botão delete */
+#taskList li button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  color: #ef4444;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#taskList li:hover button {
+  opacity: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-top: 20px;
+}
+
+.sidebar ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #1e293b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #273449;
+}
+
+.sidebar .active {
+  background: #3b82f6;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+}
+
+#taskList li button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  color: #ef4444;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+#taskList li button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
